@@ -23,8 +23,8 @@ const deployContract = async (params) => {
       arguments: deployArguments,
     });
 
-    const gasLimit = await transaction.estimateGas({ from: accounts[0] });
-    const gasPrice = await web3.eth.getGasPrice();
+    const gasLimit =  7000000  //await transaction.estimateGas({ from: accounts[0] });
+    const gasPrice =   25  //await web3.eth.getGasPrice();
 
     return await transaction
       .send({
